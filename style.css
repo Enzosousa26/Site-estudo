@@ -95,7 +95,17 @@ footer {
 
 .modal a{
     text-decoration: none;
+    background-color: rgba(127, 178, 255, 0.611);
+    padding: 5px 10px;
+    border-radius: 70%;
+    width: 50px;
+}
 
+.modal a:hover{
+    background-color: rgba(127, 178, 255, 0.904);
+    box-shadow: black 0px 0px 10px;
+    transition: 0.5s;
+    color: black;
 }
 
 .perfil a{
