@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contato</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    
+    <header>
+        <div>
+            <h1>Meu Site Teste</h1>
+        </div>
+        <a href="../index.html">Inicio</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="../index.html">Contato</a>
+    </header>
+    <main>
+        <h2>Aqui esta algumas coisas que podem te ajudar</h2>
+        <p> Se você tiver alguma dúvida ou precisar de ajuda, não hesite em entrar em contato conosco. Estamos aqui para ajudar e responder a todas as suas perguntas. Você pode nos enviar um e-mail para
+        </p>
+        <div class="modal">
+            <a onclick="abrirPerfil()" href="#">
+                <h1>&#x1F464;</h1>
+            </a>
+            <p>Caso sua duvida nao tenha sido resolvida</p>
+        </div>
+    </main>
+
+    <div id="perfil" class="perfil">
+        <div class="conteudo-perfil">
+            <span class="fechar" onclick="fecharPerfil()">X</span>
+            <h2>Deixaremos um numero de contato para suporte, caso sua dúvida não seja resolvida.</h2>
+            <h3><a href="tel:+5511999999999">(11) 99999-9999</a></h3>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Meu Site Teste. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
