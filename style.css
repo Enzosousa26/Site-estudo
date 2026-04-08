@@ -1,16 +1,27 @@
 @charset "UTF-8";
+
 @media (max-width: 600px) {
     .modal {
         flex-direction: column;
         text-align: center;
     }
 }
+
 @media (max-width: 600px) {
     .conteudo-perfil {
         max-width: 90%;
         padding: 15px;
     }
 }
+
+@media (max-width: 600px) {
+    header::before {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 10px;
+    }
+}
+
 
 body {
     background-color: antiquewhite;
