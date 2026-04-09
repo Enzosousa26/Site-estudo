@@ -16,12 +16,12 @@ function fecharPerfil() {
     }, 300);
 }
 
-window.onclick = function(event) {
+window.addEventListener('pointerdown', function(event) {
     const modal = document.getElementById('perfil');
     if (modal && event.target === modal) {
         fecharPerfil();
     }
-};
+});
 
 window.addEventListener('load', () => {
     const topnavLinks = document.querySelectorAll('.topnav a');
