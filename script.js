@@ -1,5 +1,4 @@
-﻿// Este é o arquivo JavaScript.
-// Ele faz ações acontecerem, como abrir modal e marcar o link ativo.
+﻿// Ele faz ações acontecerem, como abrir modal e marcar o link ativo.
 
 function abrirPerfil() {
     // Procura o elemento que tem id 'perfil'. Esse é o modal.
