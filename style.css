@@ -24,7 +24,7 @@
 
 body {
     background-color: antiquewhite;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -218,4 +218,42 @@ footer {
 
 .fechar:hover {
     color: rgba(0, 0, 0, 0.545);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-2px);
+    background: #333;
+}
+
+@media (max-width: 700px) {
+    #back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
 }

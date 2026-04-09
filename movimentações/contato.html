@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site teste</title>
+    <meta name="description" content="Página de contato do Site Teste, entre em contato conosco para dúvidas e suporte.">
+    <title>Site Teste - Contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../favicon-32x32.png" type="image/png">
     
@@ -12,9 +16,9 @@
     <header class="topbar">
         <h1>Suporte para Contato</h1>
         <nav class="topnav">
-            <a href="../index.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
+            <a href="../index.html" aria-label="Página inicial">Home</a>
+            <a href="sobre.html" aria-label="Página sobre nós">Sobre</a>
+            <a href="contato.html" aria-label="Página de contato">Contato</a>
         </nav>
     </header>
 
@@ -30,9 +34,9 @@
         </div>
     </main>
 
-    <div id="perfil" class="perfil">
+    <div id="perfil" class="perfil" role="dialog" aria-modal="true">
         <div class="conteudo-perfil">
-            <span class="fechar" onclick="fecharPerfil()">X</span>
+            <span class="fechar" onclick="fecharPerfil()" aria-label="Fechar modal">X</span>
             <h2>Deixaremos um numero de contato para suporte, caso sua dúvida não seja resolvida.</h2>
             <h3><a href="tel:+5511999999999">(11) 99999-9999</a></h3>
         </div>
@@ -41,6 +45,8 @@
     <footer>
         <p>&copy; 2026 Meu Site Teste. Todos os direitos reservados.</p>
     </footer>
+
+    <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
 
     <script src="../script.js"></script>
 </body>
