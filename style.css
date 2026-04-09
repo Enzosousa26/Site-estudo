@@ -1,7 +1,9 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
+/* Regras para telas pequenas: quando a largura for menor que 600px */
 @media (max-width: 600px) {
     .modal {
+        /* Modal em coluna para mobile */
         flex-direction: column;
         text-align: center;
     }
@@ -9,6 +11,7 @@
 
 @media (max-width: 600px) {
     .conteudo-perfil {
+        /* Conteúdo do modal ocupa quase toda a largura no celular */
         max-width: 90%;
         padding: 15px;
     }
@@ -16,6 +19,7 @@
 
 @media (max-width: 600px) {
     header::before {
+        /* Ajuste extra em telas pequenas, se houver pseudo-elemento */
         width: 48px;
         height: 48px;
         margin-bottom: 10px;
@@ -23,6 +27,7 @@
 }
 
 body {
+    /* Estilo básico de todo o corpo da página */
     background-color: antiquewhite;
     font-family: 'Inter', Arial, sans-serif;
     text-align: center;
@@ -30,8 +35,10 @@ body {
     padding: 0;
 }
 
+/* Mais regras para telas menores que 700px */
 @media (max-width: 700px) {
     header {
+        /* Cabeçalho empilhado em celulares */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -40,6 +47,7 @@ body {
     }
 
     .topnav {
+        /* Menu ocupa toda a largura em telas pequenas */
         width: 100%;
         justify-content: center;
         gap: 10px;
@@ -47,6 +55,7 @@ body {
     }
 
     .topnav a {
+        /* Links do menu ficam maiores e centralizados */
         flex: 1 1 auto;
         min-width: 100px;
         max-width: 180px;
@@ -54,12 +63,14 @@ body {
     }
 
     main {
+        /* O conteúdo principal usa mais espaço lateral */
         width: 95%;
         margin: 18px auto;
     }
 }
 
 header {
+    /* Estilo do cabeçalho com fundo escuro e layout flexível */
     background-color: #111;
     color: white;
     padding: 14px 18px;
@@ -73,6 +84,7 @@ header {
 }
 
 .topnav {
+    /* Estilo do menu de navegação */
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
@@ -80,6 +92,7 @@ header {
 }
 
 .topnav a {
+    /* Estilo dos links do menu */
     color: white;
     text-decoration: none;
     padding: 10px 14px;
@@ -89,16 +102,19 @@ header {
 }
 
 .topnav a:hover {
+    /* Quando o mouse passa em cima do link */
     background: rgba(255, 255, 255, 0.06);
 }
 
 .topnav a.active {
+    /* Estilo do link da página atual */
     background: rgba(255, 255, 255, 0.2);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28), 0 12px 30px rgba(0, 0, 0, 0.16);
     transform: translateY(-3px);
 }
 
-main { 
+main {
+    /* Caixa branca no centro da página */
     background-color: white;
     text-align: center;
     display: flex;
@@ -113,12 +129,14 @@ main {
 }
 
 main p {
+    /* Texto dentro do conteúdo principal */
     font-size: 18px;
     color: #333;
     text-align: center;
 }
 
 footer {
+    /* Rodapé simples */
     color: black;
     text-align: center;
     padding: 8px;
@@ -127,7 +145,8 @@ footer {
     border-radius: 5px 5px 0px 0px;
 }
 
-.modal{
+.modal {
+    /* Caixa do modal com ícone e texto */
     display: flex;
     align-self: center;
     align-items: center;
@@ -135,18 +154,21 @@ footer {
     padding: 2px;
 }
 
-.modal h1{
+.modal h1 {
+    /* Ícone grande dentro do modal */
     font-size: 22px;
     color: rgba(0, 0, 0, 0.704);
 }
 
-.modal p{
+.modal p {
+    /* Texto do modal */
     font-size: 18px;
     color: rgba(0, 0, 0, 0.704);
     margin: 0;
 }
 
-.modal a{
+.modal a {
+    /* Link do modal com estilo de botão */
     text-decoration: none;
     background-color: rgba(68, 78, 92, 0.611);
     padding: 5px 10px;
@@ -154,25 +176,29 @@ footer {
     width: 50px;
 }
 
-.modal a:hover{
+.modal a:hover {
+    /* Efeito quando passa o mouse no botão do modal */
     background-color: rgba(108, 123, 145, 0.904);
     box-shadow: black 0px 0px 10px;
     transition: 0.5s;
     color: black;
 }
 
-.perfil a{
+.perfil a {
+    /* Link dentro do modal de perfil */
     text-decoration: none;
     color: rgba(0, 0, 0, 0.5);
 }
 
-.perfil a:hover{
+.perfil a:hover {
+    /* Efeito no link do modal */
     color: rgba(0, 0, 0, 0.704);
-    transform: scale(1,0);
+    transform: scale(1, 0);
     transition: 0.5s;
 }
 
 .perfil {
+    /* Fundo escuro que cobre a tela quando o modal está aberto */
     position: fixed;
     top: 0;
     left: 0;
@@ -187,10 +213,12 @@ footer {
 }
 
 .perfil.ativo {
+    /* Mostra o modal quando ele ativa a classe ativo */
     opacity: 1;
 }
 
 .conteudo-perfil {
+    /* Caixa branca dentro do modal */
     background-color: white;
     color: #000000a6;
     padding: 20px;
@@ -203,10 +231,12 @@ footer {
 }
 
 .perfil.ativo .conteudo-perfil {
+    /* Faz a caixa crescer quando o modal abre */
     transform: scale(1);
 }
 
 .fechar {
+    /* Botão de fechar dentro do modal */
     position: absolute;
     top: 10px;
     right: 10px;
@@ -217,10 +247,12 @@ footer {
 }
 
 .fechar:hover {
+    /* Mudança de cor quando está em cima do X de fechar */
     color: rgba(0, 0, 0, 0.545);
 }
 
 #back-to-top {
+    /* Botão para voltar para cima da página */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -239,17 +271,14 @@ footer {
 }
 
 #back-to-top.show {
+    /* Mostra o botão quando a classe show é adicionada */
     opacity: 1;
     visibility: visible;
 }
 
-#back-to-top:hover {
-    transform: translateY(-2px);
-    background: #333;
-}
-
 @media (max-width: 700px) {
     #back-to-top {
+        /* Ajusta o botão em telas menores */
         bottom: 15px;
         right: 15px;
         width: 45px;

@@ -1,20 +1,32 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Cabeçalho do HTML: informações que não aparecem diretamente na página -->
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site funcionar melhor em celular e tablet -->
     <meta name="description" content="Site teste simples demonstrando estrutura HTML, CSS e JavaScript com menu responsivo e modal interativo.">
+    <!-- Descrição do site que o navegador e o Google podem ler -->
     <title>Site Teste - Página Inicial</title>
+    <!-- Título que aparece na aba do navegador -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Conecta ao Google Fonts para carregar a fonte Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Puxa a fonte Inter do Google -->
     <link rel="stylesheet" href="style.css">
+    <!-- Puxa o arquivo CSS que diz como a página deve ficar bonita -->
     <link rel="icon" href="./favicon-32x32.png" type="image/png">
+    <!-- Ícone que aparece na aba do navegador -->
 </head>
 <body>
+    <!-- Corpo da página: tudo que aparece para o usuário -->
     <header class="topbar">
+        <!-- Cabeçalho do site com título e menu -->
         <h1>Inicio do Site Teste</h1>
         <nav class="topnav">
+            <!-- Menu de navegação para ir para outras páginas -->
             <a href="index.html" aria-label="Página inicial">Home</a>
             <a href="movimentações/sobre.html" aria-label="Página sobre nós">Sobre</a>
             <a href="movimentações/contato.html" aria-label="Página de contato">Contato</a>
@@ -22,13 +34,16 @@
     </header>
 
     <main>
+        <!-- Área principal do conteúdo da página -->
         <section>
+            <!-- Primeira seção com boas-vindas -->
             <h2>Bem-vindo ao meu site teste!</h2>
             <p>Este é um exemplo de site simples para demonstrar a estrutura básica de um documento HTML.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat veniam asperiores ratione dolorum maiores dolore perferendis libero, ad molestiae hic quaerat placeat sunt saepe numquam. Suscipit cupiditate doloremque ratione modi!</p>
         </section>
 
         <section>
+            <!-- Segunda seção com destaque de conteúdo -->
             <h3>Seção de Destaque</h3>
             <p>Esta seção pode ser usada para destacar informações importantes ou promoções.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, eum placeat! Nemo voluptates quis nam eos facere nulla, distinctio asperiores? Ratione, aut non voluptatibus nulla ut numquam corrupti ad voluptatum!</p>
@@ -39,11 +54,14 @@
         </section>
     </main>
     <footer>
+        <!-- Rodapé da página com aviso de copyright -->
         <p>&copy; 2026 Meu Site Teste. Todos os direitos reservados.</p>
     </footer>
 
     <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
+    <!-- Botão que aparece para subir a página para o topo -->
 
     <script src="script.js"></script>
+    <!-- Aqui o JavaScript é carregado para fazer coisas dinâmicas funcionar -->
 </body>
 </html>
