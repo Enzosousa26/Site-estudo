@@ -40,11 +40,11 @@ window.addEventListener('pointerdown', function(event) {
 window.addEventListener('load', () => {
     // Quando a página terminar de carregar, faz o menu ficar marcado.
     const topnavLinks = document.querySelectorAll('.topnav a');
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     topnavLinks.forEach((link) => {
-        // Se o href do link for igual à página atual, marca como ativo.
-        if (link.getAttribute('href') === currentPage) {
+        // Compara o pathname resolvido do link com o pathname atual
+        const linkPath = new URL(link.href, window.location.origin).pathname;
+        if (linkPath === window.location.pathname) {
             link.classList.add('active');
         }
 
@@ -80,6 +80,19 @@ window.addEventListener('load', () => {
                 behavior: 'smooth'
             });
         });
+    }
+
+    // Funcionalidade do botão de login
+    const loginBtn = document.getElementById('login-btn');
+    if (loginBtn) {
+        console.log('Botão de login encontrado');
+        loginBtn.addEventListener('click', () => {
+            console.log('Botão clicado, redirecionando...');
+            // Redireciona para a página principal
+            window.location.href = './movimentações/index.html';
+        });
+    } else {
+        console.log('Botão de login não encontrado');
     }
 });
 

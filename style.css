@@ -69,6 +69,139 @@ body {
     }
 }
 
+.tela-login{
+     /* Estilo do cabeçalho com fundo escuro e layout flexível */
+    background-color: #111;
+    color: white;
+    font-family: 'Inter', Arial, sans-serif;
+    padding: 14px 18px;
+    border-radius: 0 0 18px 18px;
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.login-container{
+    /* Caixa branca no centro da página */
+    background-color: white;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    height: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container input{
+    width: 350px;
+    height: 21px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+}
+
+.login-container button {
+    width: 350px;
+    height: 30px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #333;
+}
+
+/* Responsividade para a tela de login */
+@media (max-width: 768px) {
+    .tela-login {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-container {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .login-container input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .login-container button {
+        width: 100%;
+        max-width: 200px;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tela-login h2 {
+        font-size: 18px;
+    }
+
+    .tela-login h3 {
+        font-size: 14px;
+    }
+
+    .login-container h2 {
+        font-size: 16px;
+    }
+
+    .login-container p {
+        font-size: 14px;
+    }
+
+    .login-container {
+        padding: 10px;
+    }
+
+    .login-container input {
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+.voltar-tela-login{
+    background-color: #111;
+}
+
+.voltar-tela-login a{
+    /* Estilo dos links do menu */
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: left;
+    display: flex;
+    width: 70px;
+    margin-left: 15px;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.voltar-tela-login a:hover{
+    /* Quando o mouse passa em cima do link */
+    background: rgba(255, 255, 255, 0.166);
+}
+
 header {
     /* Estilo do cabeçalho com fundo escuro e layout flexível */
     background-color: #111;
