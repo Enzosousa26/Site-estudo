@@ -1,4 +1,21 @@
 ﻿// Ele faz ações acontecerem, como abrir modal e marcar o link ativo.
+let admin = 123
+
+
+function verificarUsuario(){
+    let usuario = document.querySelector('input').value;
+    const loginBtn = document.getElementById('login-btn');
+    if (loginBtn){
+        loginBtn.addEventListener('click', () => {
+        alert('Parabens');
+        window.location.href = '../movimentações/home.html';
+        });
+    }else{
+        alert('ERRO! tente novamente')
+        window.location.href = '../index.html';
+    }
+}
+
 
 function abrirPerfil() {
     // Procura o elemento que tem id 'perfil'. Esse é o modal.
@@ -83,18 +100,20 @@ window.addEventListener('load', () => {
     }
 
     // Funcionalidade do botão de login
-    const loginBtn = document.getElementById('login-btn');
-    if (loginBtn) {
-        console.log('Botão de login encontrado');
-        loginBtn.addEventListener('click', () => {
-            console.log('Botão clicado, redirecionando...');
-            // Redireciona para a página principal
-            window.location.href = '../movimentações/home.html';
-        });
-    } else {
+    if(admin == usuario){
+        const loginBtn = document.getElementById('login-btn');
+        if (loginBtn) {
+            console.log('Botão de login encontrado');
+            loginBtn.addEventListener('click', () => {
+                console.log('Botão clicado, redirecionando...');
+                // Redireciona para a página principal
+                window.location.href = '../movimentações/home.html';
+            });
+        } else {
         console.log('Botão de login não encontrado');
-    }
-});
+        }
+    });
+
 
 
 document.addEventListener('keydown', function(event) {
