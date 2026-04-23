@@ -191,7 +191,8 @@ body {
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     text-align: left;
     display: flex;
-    width: 70px;
+    width: 15px;
+    height: 20px;
     margin-left: 15px;
     padding: 6px;
     border-radius: 10px;

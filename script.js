@@ -89,12 +89,13 @@ window.addEventListener('load', () => {
         loginBtn.addEventListener('click', () => {
             console.log('Botão clicado, redirecionando...');
             // Redireciona para a página principal
-            window.location.href = './movimentações/index.html';
+            window.location.href = '../movimentações/home.html';
         });
     } else {
         console.log('Botão de login não encontrado');
     }
 });
+
 
 document.addEventListener('keydown', function(event) {
     // Fecha o modal quando a tecla Escape for pressionada.
