@@ -1,19 +1,27 @@
 ﻿// Ele faz ações acontecerem, como abrir modal e marcar o link ativo.
-let admin = 123
+// Funcionalidade do botão de login
+const loginBtn = document.getElementById('login-btn');
+if (loginBtn) {
+    loginBtn.addEventListener('click', () => {
+        // Lê os inputs no momento do clique
+        let usuario = document.querySelector('input[type="text"]').value;
+        let senha = document.querySelector('input[type="password"]').value;
+        let mudarPerfil = document.getElementById('mudar-perfil');
 
+        if (usuario == 'Aminadabe.santos' && senha == '251010') {
+            window.location.href = './movimentações/home.html';
+            document.getElementById('mudar-perfil').value = '<h4 id="mudar-perfil">Perfil: Admin</h4>';
+        }else if(usuario == 'Enzo.santos' && senha == '2510'){
+            window.location.href = './movimentações/home.html';
+            
+        }else{
+            alert('ERRO! Usuario invalido, tente novamente!');
+        }
+    });
+}
 
-function verificarUsuario(){
-    let usuario = document.querySelector('input').value;
-    const loginBtn = document.getElementById('login-btn');
-    if (loginBtn){
-        loginBtn.addEventListener('click', () => {
-        alert('Parabens');
-        window.location.href = '../movimentações/home.html';
-        });
-    }else{
-        alert('ERRO! tente novamente')
-        window.location.href = '../index.html';
-    }
+function verificarPerfil(){
+    let mudarPerfil = document.getElementById('mudar-perfil');
 }
 
 
@@ -97,28 +105,5 @@ window.addEventListener('load', () => {
                 behavior: 'smooth'
             });
         });
-    }
-
-    // Funcionalidade do botão de login
-    if(admin == usuario){
-        const loginBtn = document.getElementById('login-btn');
-        if (loginBtn) {
-            console.log('Botão de login encontrado');
-            loginBtn.addEventListener('click', () => {
-                console.log('Botão clicado, redirecionando...');
-                // Redireciona para a página principal
-                window.location.href = '../movimentações/home.html';
-            });
-        } else {
-        console.log('Botão de login não encontrado');
-        }
-    });
-
-
-
-document.addEventListener('keydown', function(event) {
-    // Fecha o modal quando a tecla Escape for pressionada.
-    if (event.key === 'Escape') {
-        fecharPerfil();
     }
 });
